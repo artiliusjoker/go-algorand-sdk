@@ -82,6 +82,10 @@ func (c *Client) Status() *Status {
 	return &Status{c: c}
 }
 
+func (c *Client) Shutdown() *Shutdown {
+	return &Shutdown{c: c}
+}
+
 func (c *Client) StatusAfterBlock(round uint64) *StatusAfterBlock {
 	return &StatusAfterBlock{c: c, round: round}
 }
